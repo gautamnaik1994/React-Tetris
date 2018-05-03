@@ -9,6 +9,9 @@ class Grid extends Component {
 		super(props);
 		console.log('Propsss ', props);
 	}
+	state={
+		gridArray:arrayBuilder(),
+	}
 
 	generateGridCells() {
 		const gridCellDimens = {

@@ -7,10 +7,10 @@ function init() {
 		window.addEventListener('load', () => {
 			navigator.serviceWorker
 				.register('/sw.js')
-				.then(registration => {
+				.then((registration) => {
 					console.log('SW registered: ', registration);
 				})
-				.catch(registrationError => {
+				.catch((registrationError) => {
 					console.log('SW registration failed: ', registrationError);
 				});
 		});
@@ -18,4 +18,4 @@ function init() {
 }
 
 ReactDOM.render(<MainRoute />, document.getElementById('root'));
-init();
+// init();

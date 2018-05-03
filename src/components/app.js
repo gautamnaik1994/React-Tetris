@@ -8,10 +8,13 @@ import Header from './common/Header';
 const App = () => (
 	<Fragment>
 		<Header />
-		<Switch>
-			<Route exact path="/" component={Home} />
-			<Route path="/game" component={Game} />
-		</Switch>
+		{process.env.NODE_ENV !== 'production' ? (
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route path="/game" component={Game} />
+   	</Switch>
+		) : <Game /> }
+		)}
 	</Fragment>
 );
 

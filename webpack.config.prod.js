@@ -20,7 +20,7 @@ module.exports = {
 			profile: true,
 		}),
 		new HtmlWebpackPlugin({
-			title: 'React Stack',
+			title: 'React Tetris',
 			inject: true,
 			template: './src/views/index.html',
 		}),
@@ -34,9 +34,9 @@ module.exports = {
 			skipWaiting: true,
 		}),
 		new WebpackPwaManifest({
-			name: 'React Stack',
-			short_name: 'React Stack',
-			description: 'Personal React Boilerplate',
+			name: 'React Tetris',
+			short_name: 'React Tetris',
+			description: 'React Tetris',
 			background_color: '#ffffff',
 			icons: [
 				{

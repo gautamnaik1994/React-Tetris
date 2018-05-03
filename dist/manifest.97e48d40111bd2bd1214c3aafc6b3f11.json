@@ -36,11 +36,11 @@
       "type": "image/png"
     }
   ],
-  "name": "React Stack",
-  "short_name": "React Stack",
+  "name": "React Tetris",
+  "short_name": "React Tetris",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": ".",
-  "description": "Personal React Boilerplate",
+  "description": "React Tetris",
   "background_color": "#ffffff"
 }
