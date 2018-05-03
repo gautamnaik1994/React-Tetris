@@ -8,7 +8,6 @@ class Grid extends Component {
 	constructor(props) {
 		super(props);
 		console.log('Propsss ', props);
-
 	}
 
 	generateGridCells() {
@@ -16,19 +15,9 @@ class Grid extends Component {
 			gridCellWidth: this.props.gridWidth / 10,
 			gridCellHeight: this.props.gridHeight / 16,
 		};
-		console.log('Dimness ', gridCellDimens);
-		// const tempRow[],tempCell[];
-		// for(row=0; row<this.state.gridArray.length;++row){
-		//for(column=0;column[row].length< ++column ){
-
-		// }
-		// }
-		return this.state.gridArray.map((row, i) => {
-			//console.log('Row ', row, i);
-			return (
-				<GridRow key={i} gridCells={row} gridCellDimens={gridCellDimens} />
-			);
-		});
+		return this.state.gridArray.map((row, i) => (
+			<GridRow key={i} gridCells={row} gridCellDimens={gridCellDimens} />
+		));
 	}
 	render() {
 		return (
