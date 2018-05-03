@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import GridCell from './GridCell';
 
 const GridRow = ({ gridCells, gridCellDimens }) => (
-	<div className="GridRow">
+	<div className="GridRow ">
 		{gridCells.map((gridCell, i) => {
 			return (
 				<GridCell
