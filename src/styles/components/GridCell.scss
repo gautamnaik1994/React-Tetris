@@ -1,0 +1,9 @@
+.GridCell {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: var(--gridCellWidth);
+	height: var(--gridCellHeight);
+	border: 1px solid black;
+	box-sizing: border-box;
+}
