@@ -2,8 +2,8 @@
   "name": "react-tetris",
   "version": "1.0.0",
   "description": "Tetris Game implementation in reactjs",
-	"main": "index.js",
-	"homepage": "http://gautamnaik1994.github.io/React-Tetris",
+  "main": "index.js",
+  "homepage": "http://gautamnaik1994.github.io/React-Tetris",
   "scripts": {
     "start": "webpack-dev-server --hot --mode development --config webpack.config.dev.js",
     "prebuild": "rimraf dist",
@@ -12,8 +12,7 @@
     "pretty": "prettier --write \"**/*.js\" --config .prettierrc",
     "pretty-scss": "prettier --write \"**/*.scss\" --config .prettierrc",
     "format": "prettier --write '**/*.{js,scss}' --config .prettierrc",
-		"precommit": "lint-staged",
-
+    "precommit": "lint-staged",
     "deploy": "gh-pages -d dist"
   },
   "author": "Gautam Naik",
