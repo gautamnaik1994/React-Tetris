@@ -11,7 +11,14 @@ class Game extends Component {
 		};
 	}
 
-	startGame = () => {};
+	startGame = () => {
+		console.log('start Game');
+		let _gridArray = this.state.gridArray;
+		let square = [[1, 1], [1, 1]];
+		_gridArray[0][8].value = 3;
+		_gridArray[1][8].value = 4;
+		console.log(' temp array ', _gridArray[0][8]);
+	};
 	render() {
 		return (
 			<Fragment>
@@ -20,7 +27,7 @@ class Game extends Component {
 					gridWidth={300}
 					gridHeight={600}
 				/>
-				<Controls />
+				<Controls startGame={this.startGame} />
 			</Fragment>
 		);
 	}

@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
 
-const Controls = () => (
+const Controls = props => (
 	<Fragment>
 		<p>Game Controls</p>
-		<button type="button">Start Game</button>
+		<button type="button" onClick={props.startGame}>
+			Start Game
+		</button>
 	</Fragment>
 );
 

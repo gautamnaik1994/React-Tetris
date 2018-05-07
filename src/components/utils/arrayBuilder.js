@@ -11,6 +11,5 @@ export default function(
 		}
 		arr[i] = columns;
 	}
-	console.log('Arrray ', arr);
 	return arr;
 }
