@@ -13,10 +13,11 @@ class Game extends Component {
 
 	startGame = () => {
 		console.log('start Game');
-		let _gridArray = this.state.gridArray;
+		let _gridArray = [...this.state.gridArray];
 		let square = [[1, 1], [1, 1]];
-		_gridArray[0][8].value = 3;
-		_gridArray[1][8].value = 4;
+		_gridArray[0][2].value = 3;
+		_gridArray[1][2].value = 4;
+		this.setState({ gridArray: _gridArray });
 		console.log(' temp array ', _gridArray[0][8]);
 	};
 	render() {
