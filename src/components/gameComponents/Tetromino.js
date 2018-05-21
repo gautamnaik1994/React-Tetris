@@ -2,6 +2,10 @@ class Tetromino {
 	constructor(tetrominoType) {
 		this.tetrominoType = tetrominoType;
 	}
+	globalPosition = {
+		row: 0,
+		col: 5,
+	};
 	get tetrominoType() {
 		return this._tetrominoType;
 	}
