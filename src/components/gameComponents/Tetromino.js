@@ -1,11 +1,12 @@
 class Tetromino {
-	constructor(tetrominoType) {
+	constructor(tetrominoType, gridWidth) {
 		this.tetrominoType = tetrominoType;
+		this.gridWidth = gridWidth;
+		let globalPosition = {
+			row: 0,
+			col: this.gridWidth / 2 - 1,
+		};
 	}
-	globalPosition = {
-		row: 0,
-		col: 5,
-	};
 	get tetrominoType() {
 		return this._tetrominoType;
 	}
