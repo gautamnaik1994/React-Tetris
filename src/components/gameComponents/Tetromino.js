@@ -4,8 +4,12 @@ class Tetromino {
 		this.gridWidth = gridWidth;
 		this.globalPosition = {
 			row: 0,
-			col: this.gridWidth / 2 - 1,
+			col: gridWidth / 2 - 1,
 		};
+	}
+	updatePosition(vertical, horizontal) {
+		this.globalPosition.col += horizontal;
+		this.globalPosition.row += vertical;
 	}
 	get tetrominoType() {
 		return this._tetrominoType;
