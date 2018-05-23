@@ -2,7 +2,7 @@ class Tetromino {
 	constructor(tetrominoType, gridWidth) {
 		this.tetrominoType = tetrominoType;
 		this.gridWidth = gridWidth;
-		let globalPosition = {
+		this.globalPosition = {
 			row: 0,
 			col: this.gridWidth / 2 - 1,
 		};
