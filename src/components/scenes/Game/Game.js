@@ -10,15 +10,25 @@ class Game extends Component {
 			gridArray: arrayBuilder(),
 		};
 	}
-
+	runIterations = () => {
+		console.log('Runiing Iterations');
+		let _gridArray = [...this.state.gridArray];
+		_gridArray[0][2].value += 1;
+		_gridArray[1][2].value += 1;
+		this.setState({ gridArray: _gridArray });
+	};
 	startGame = () => {
 		console.log('start Game');
-		let _gridArray = [...this.state.gridArray];
-		let square = [[1, 1], [1, 1]];
-		_gridArray[0][2].value = 3;
-		_gridArray[1][2].value = 4;
-		this.setState({ gridArray: _gridArray });
-		console.log(' temp array ', _gridArray[0][8]);
+		let iteration = window.setInterval(this.runIterations, 2000);
+		//let _gridArray = [...this.state.gridArray];
+		//let square = [[1, 1], [1, 1]];
+		//_gridArray[0][2].value = 3;
+		//_gridArray[1][2].value = 4;
+		//this.setState({ gridArray: _gridArray });
+		//console.log(' temp array ', _gridArray[0][8]);
+		//this.setState({
+		//gridArray: _gridArray,
+		//});
 	};
 	render() {
 		return (
