@@ -1,3 +1,5 @@
+import { O } from '../constants/tetrominoTypes.js';
+
 class Tetromino {
 	constructor(tetrominoType, gridWidth) {
 		this.tetrominoType = tetrominoType;
@@ -16,7 +18,7 @@ class Tetromino {
 	}
 	set tetrominoType(value) {
 		switch (value) {
-			case 'SQAURE':
+			case O:
 				this._tetrominoType = [[1, 1], [1, 1]];
 				break;
 			default:

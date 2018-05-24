@@ -1,7 +1,8 @@
 import Tetromino from '../Tetromino.js';
+import { O } from '../../constants/tetrominoTypes.js';
 
 describe('Tetromino Class', () => {
-	const tetromino = new Tetromino('SQAURE', 16);
+	const tetromino = new Tetromino(O, 16);
 	it('should return correct tetromino type', () => {
 		expect(tetromino.tetrominoType).toEqual([[1, 1], [1, 1]]);
 	});
