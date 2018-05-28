@@ -13,8 +13,8 @@
     "format": "prettier-eslint --write \"src/**/*.js\" --config .prettierrc --eslint-config-path .eslintrc",
     "pretty-scss": "prettier --write \"**/*.scss\" --config .prettierrc",
     "format2": "prettier --write '**/*.{js,scss}' --config .prettierrc",
-    "precommit": "lint-staged",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "precommit": "lint-staged"
   },
   "author": "Gautam Naik",
   "license": "ISC",

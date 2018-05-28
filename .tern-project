@@ -7,10 +7,5 @@
 "loadEagerly": [
 ],
   "plugins": {
-    "node": {},
-    "webpack":{},
-    "commonjs":{},
-    "es_modules":{},
-    "modules":{}
   }
 }
