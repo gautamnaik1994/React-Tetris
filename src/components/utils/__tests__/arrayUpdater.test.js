@@ -9,6 +9,9 @@ describe('ArrayUpdater', () => {
 		const originalArray = arrayBuilder();
 		const updatedArray = arrayUpdater(originalArray, tetromino);
 		expect(updatedArray[0][7]).toEqual(1);
+		expect(updatedArray[0][8]).toEqual(1);
+		expect(updatedArray[0][6]).toEqual(0);
+		expect(updatedArray[0][9]).toEqual(0);
 		expect(updatedArray[1][7]).toEqual(1);
 	});
 });
