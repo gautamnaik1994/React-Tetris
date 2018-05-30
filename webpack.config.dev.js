@@ -32,7 +32,7 @@ module.exports = {
 		}),
 	],
 	performance: {
-		hints: 'warning',
+		// hints: 'warning',
 	},
 	resolve: {
 		modules: ['node_modules'],
