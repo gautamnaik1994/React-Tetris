@@ -2,33 +2,28 @@ import React, { Fragment, Component } from 'react';
 import Grid from '../../gameComponents/Grid';
 import Controls from '../../gameComponents/Controls';
 import arrayBuilder from '../../utils/arrayBuilder';
+import arrayUpdater from '../../utils/arrayUpdater.js';
+import Tetromino from '../../gameComponents/Tetromino.js';
+import { O } from '../../constants/tetrominoTypes.js';
 
 class Game extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			gridArray: arrayBuilder(),
+			tetromino: new Tetromino(O, 16),
 		};
 	}
 	runIterations = () => {
 		console.log('Runiing Iterations');
 		let _gridArray = [...this.state.gridArray];
-		_gridArray[0][2].value += 1;
-		_gridArray[1][2].value += 1;
-		this.setState({ gridArray: _gridArray });
+		const updatedArray = arrayUpdater(_gridArray, this.state.tetromino);
+		this.setState({ gridArray: updatedArray });
+		this.state.tetromino.updatePosition(1,0);
 	};
 	startGame = () => {
 		console.log('start Game');
 		let iteration = window.setInterval(this.runIterations, 2000);
-		//let _gridArray = [...this.state.gridArray];
-		//let square = [[1, 1], [1, 1]];
-		//_gridArray[0][2].value = 3;
-		//_gridArray[1][2].value = 4;
-		//this.setState({ gridArray: _gridArray });
-		//console.log(' temp array ', _gridArray[0][8]);
-		//this.setState({
-		//gridArray: _gridArray,
-		//});
 	};
 	render() {
 		return (

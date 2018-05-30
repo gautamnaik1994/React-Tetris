@@ -9,7 +9,7 @@ class Tetromino {
 			col: gridWidth / 2 - 1,
 		};
 	}
-	updatePosition(vertical, horizontal) {
+	updatePosition(vertical = 1, horizontal = 0) {
 		this.globalPosition.col += horizontal;
 		this.globalPosition.row += vertical;
 	}
