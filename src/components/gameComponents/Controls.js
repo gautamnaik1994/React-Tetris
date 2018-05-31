@@ -6,6 +6,12 @@ const Controls = props => (
 		<button type="button" onClick={props.startGame}>
 			Start Game
 		</button>
+		<button type="button" onClick={props.moveLeft}>
+			Left
+		</button>
+		<button type="button" onClick={props.moveRight}>
+			Right
+		</button>
 	</Fragment>
 );
 

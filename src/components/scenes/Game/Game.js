@@ -19,11 +19,24 @@ class Game extends Component {
 		let _gridArray = [...this.state.gridArray];
 		const updatedArray = arrayUpdater(_gridArray, this.state.tetromino);
 		this.setState({ gridArray: updatedArray });
-		this.state.tetromino.updatePosition(1,0);
+		this.state.tetromino.updatePosition(1, 0);
 	};
 	startGame = () => {
 		console.log('start Game');
 		let iteration = window.setInterval(this.runIterations, 2000);
+	};
+	moveRight = () => {
+		this.state.tetromino.updatePosition(0, 1);
+		let _gridArray = [...this.state.gridArray];
+		const updatedArray = arrayUpdater(_gridArray, this.state.tetromino);
+		this.setState({ gridArray: updatedArray });
+	};
+	moveLeft = () => {
+		this.state.tetromino.updatePosition(0, -1);
+
+		let _gridArray = [...this.state.gridArray];
+		const updatedArray = arrayUpdater(_gridArray, this.state.tetromino);
+		this.setState({ gridArray: updatedArray });
 	};
 	render() {
 		return (
@@ -33,7 +46,11 @@ class Game extends Component {
 					gridWidth={300}
 					gridHeight={600}
 				/>
-				<Controls startGame={this.startGame} />
+				<Controls
+					startGame={this.startGame}
+					moveRight={this.moveRight}
+					moveLeft={this.moveLeft}
+				/>
 			</Fragment>
 		);
 	}
