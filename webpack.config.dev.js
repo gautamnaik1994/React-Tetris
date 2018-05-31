@@ -147,7 +147,7 @@ module.exports = {
 		contentBase: path.join(__dirname, 'dist'),
 		hot: true,
 		historyApiFallback: true,
-		port: 3000,
+		port: 4000,
 		// proxy: {
 		//   '/auth/google': 'http://localhost:5000',
 		// },
