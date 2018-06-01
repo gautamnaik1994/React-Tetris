@@ -33,7 +33,6 @@ class Game extends Component {
 	};
 	moveLeft = () => {
 		this.state.tetromino.updatePosition(0, -1);
-
 		let _gridArray = [...this.state.gridArray];
 		const updatedArray = arrayUpdater(_gridArray, this.state.tetromino);
 		this.setState({ gridArray: updatedArray });
